@@ -1,0 +1,20 @@
+body {
+    background-color: rgb(27, 27, 27);
+    font-family: Orbitron;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    padding: 20px;
+    border-radius: 24px;
+}
