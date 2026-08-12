@@ -2,7 +2,8 @@
 
 A personal project aiming to build a functional Web-Based Operating System (WebOS) using only HTML, CSS, and JavaScript.
 
-![CircuitOS Screenshot](<img width="1918" height="1079" alt="Ekran görüntüsü 2026-08-13 003928" src="https://github.com/user-attachments/assets/ec71d621-d77b-4220-87b3-f823958c604d" />)
+![CircuitOS Screenshot](<img width="1918" height="1079" alt="Ekran görüntüsü 2026-08-13 003928" src="https://github.com/user-attachments/assets/e4d381af-e3ee-4467-a577-4d5ab86eecb8" />
+)
 
 **[Try it live](https://circuitphantom.github.io/CircuitOS/)**
 
