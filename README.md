@@ -1,36 +1,45 @@
 # CircuitOS
 
-A personal project aiming to build a functional Web-Based Operating System (WebOS) using only HTML, CSS, and JavaScript.
+A browser-based Web OS shell — windows, a live topbar clock, and a desktop UI, built with nothing but HTML, CSS, and JavaScript.
 
-<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/271ee6c7-662f-402f-a92b-e548a35cc098" />
+<img width="1919" height="1079" alt="Ekran görüntüsü 2026-08-13 150356" src="https://github.com/user-attachments/assets/d4ae2595-3782-41cb-925f-125d69d70537" />
 
-**[Try it live](https://circuitphantom.github.io/CircuitOS/)**
 
-## Quick Start
+**[Try it live here](https://circuitphantom.github.io/CircuitOS/)**
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/CircuitPhantom/CircuitOS.git
-   ```
-2. Open the project folder in VS Code.
-3. Start it with Live Server, or open `index.html` directly in your browser.
+## Quick start
+
+Just open the link above — nothing to install.
+
+To run it locally instead:
+
+```bash
+git clone https://github.com/CircuitPhantom/CircuitOS.git
+cd CircuitOS
+```
+
+Then open `index.html` in a browser, or serve the folder with VS Code's Live Server.
 
 ## Features
 
-- Browser-based welcome screen (in progress)
+- Draggable "window" UI (starting with the welcome window)
+- Live topbar clock and date, updating every second
+- Closable windows with a custom titlebar and close button
+- Orbitron-based UI typography for a distinct OS look
+- Zero dependencies — pure HTML/CSS/JS, runs entirely client-side
 
-## Tech Stack
+## Tech stack
 
-- HTML
-- CSS
-- JavaScript
+HTML, CSS, and JavaScript. No frameworks, no backend, no build step.
 
-No frameworks or backend — everything runs client-side.
+## How it works
 
-## Current Status
+The whole shell is static: `index.html` renders the topbar and window DOM, `styles.css` handles the OS-like chrome (rounded window frames, blurred titlebars), and `script.js` drives the interactive bits — dragging windows and closing them. The clock is a simple `setInterval` that re-renders the topbar every second, no external time library needed.
 
-Early stage. Right now the project only has a welcome screen, and it isn't finished yet.
+## Status
+
+Early stage — this is a [Stardance](https://stardance.hackclub.com/) mission on Hack Club. Right now CircuitOS has one functional window (Welcome) with dragging and closing; more OS-like windows/apps are planned next.
 
 ## License
 
-This project is licensed under the MIT License.
+[MIT](LICENSE)
