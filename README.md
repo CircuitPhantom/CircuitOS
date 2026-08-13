@@ -10,6 +10,7 @@ A browser-based Web OS shell — windows, a live topbar clock, and a desktop UI,
 ## Quick start
 
 Just open the link above — nothing to install.
+(Tip: To open the welcome screen again, just click on the CircuitOS text on the topbar.)
 
 To run it locally instead:
 
