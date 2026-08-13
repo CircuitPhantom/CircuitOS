@@ -80,6 +80,28 @@ body {
     justify-content: center;
 }
 
+#wallpaperIcon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 32px;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+    filter: drop-shadow(0 0 8px black);
+}
+
+#wallpaperIcon:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
 a:link {
     color: white;
 }

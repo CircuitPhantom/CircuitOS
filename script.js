@@ -167,3 +167,18 @@ todoInput.addEventListener("keydown", function(e) {
     todoInput.value = ""
   }
 })
+
+//-------------------------------------------------------//
+// Wallpaper
+var wallpaperInput = document.querySelector("#wallpaperInput")
+
+wallpaperInput.addEventListener("change", function() {
+  var file = wallpaperInput.files[0]
+  if (!file) return
+
+  var reader = new FileReader()
+  reader.onload = function(e) {
+    document.body.style.backgroundImage = "url(" + e.target.result + ")"
+  }
+  reader.readAsDataURL(file)
+})

@@ -28,6 +28,7 @@ Then open `index.html` in a browser, or serve the folder with VS Code's Live Ser
 - Closable windows with a custom titlebar and close button
 - Orbitron-based UI typography for a distinct OS look
 - Zero dependencies — pure HTML/CSS/JS, runs entirely client-side
+- Custom wallpaper image
 
 ## Tech stack
 
