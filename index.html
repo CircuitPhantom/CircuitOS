@@ -7,10 +7,42 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <div class="container">
-            <h1 style="padding: 6px; border-radius: 8px; background-color: black; color: #fff;">Welcome to <strong style="color: blue;">CircuitOS</strong></h1>
-            <h2 style="font-size: larger; border-bottom: 2px dashed black; border-top: 2px dashed black; border-radius: 8px; padding: 8px 16px;">Web-Based Operating System</h2>
-            <p>View <strong><a href="https://github.com/CircuitPhantom/CircuitOS">source</a></strong></p>
+        <script src="script.js"></script>
+        
+
+        <div id="topbar">
+            <h2 style="cursor: pointer" id="welcomeopen">CircuitOS</h2>
+            <h2 id="topbarClock">Time</h2>
+            <h2>13/08/2026</h2>
         </div>
+
+        <div class="window" id="welcome">
+            <div class="windowheader" id="welcomeheader" style="width: 100%; height: 30px; display: flex; align-items: center; cursor: move; justify-content: space-between; border-top-right-radius: 15px; border-top-left-radius: 15px; background-color: rgb(39, 39, 39, 0.75);">
+                <p style="margin-left: 15px; color: #fff; font-weight: 500">Welcome</p>
+                <div class="closebutton" id="welcomeclose"><p>X</p></div>
+            </div> 
+
+            <h1 style="padding: 6px; border-radius: 8px; background-color: rgba(0, 0, 0, 0.65); backdrop-filter: blur(10px); color: #fff; margin: 20px;">Welcome to <strong style="color: blue;">CircuitOS</strong></h1>
+            <h2 style="font-size: larger; color: #fff; border-bottom: 2px dashed #fff; border-top: 2px dashed #fff; border-radius: 8px; padding: 8px 16px;">Web-Based Operating System</h2>
+            <p style="color: #fff;">A <strong><a href="https://stardance.hackclub.com/projects/47178">Stardance</a></strong> mission.</p>
+            <p style="color: #fff;">View <a href="https://github.com/CircuitPhantom/CircuitOS">source</a></p>
+        </div>
+
+
+        <script src="script.js"></script>
+        <script>
+            function updateTime() {
+                var currentTime = new Date();
+                var timeText = document.querySelector("#topbarClock");
+                var currentHour = currentTime.getHours();
+                var currentMinute = currentTime.getMinutes();
+
+                var minuteStr = currentMinute < 10 ? '0' + currentMinute : currentMinute;
+                var hourStr = currentHour < 10 ? '0' + currentHour : currentHour;
+
+                timeText.innerHTML = `${currentHour}:${minuteStr}`;
+            }
+            setInterval(updateTime, 1000);
+        </script>
     </body>
 </html>
