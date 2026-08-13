@@ -13,7 +13,7 @@
         <div id="topbar">
             <h2 style="cursor: pointer" id="welcomeopen">CircuitOS</h2>
             <h2 id="topbarClock">Time</h2>
-            <h2>13/08/2026</h2>
+            <h2 id="topbarDate">Date</h2>
         </div>
 
         <div class="window" id="welcome">
@@ -34,13 +34,22 @@
             function updateTime() {
                 var currentTime = new Date();
                 var timeText = document.querySelector("#topbarClock");
+                var dateText = document.querySelector("#topbarDate");
                 var currentHour = currentTime.getHours();
                 var currentMinute = currentTime.getMinutes();
 
                 var minuteStr = currentMinute < 10 ? '0' + currentMinute : currentMinute;
                 var hourStr = currentHour < 10 ? '0' + currentHour : currentHour;
 
-                timeText.innerHTML = `${currentHour}:${minuteStr}`;
+                var currentDay = currentTime.getDate();
+                var currentMonth = currentTime.getMonth() + 1;
+                var currentYear = currentTime.getFullYear();
+
+                var dayStr = currentDay < 10 ? '0' + currentDay : currentDay;
+                var monthStr = currentMonth < 10 ? '0' + currentMonth : currentMonth;
+
+                timeText.innerHTML = `${hourStr}:${minuteStr}`;
+                dateText.innerHTML = `${dayStr}/${monthStr}/${currentYear}`;
             }
             setInterval(updateTime, 1000);
         </script>
