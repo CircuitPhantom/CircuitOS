@@ -1,46 +1,50 @@
 # CircuitOS
 
-A browser-based Web OS shell — windows, a live topbar clock, and a desktop UI, built with nothing but HTML, CSS, and JavaScript.
+A personal project aiming to build a functional Web-Based Operating System (WebOS) using only HTML, CSS, and JavaScript.
 
-<img width="1919" height="1079" alt="Ekran görüntüsü 2026-08-13 150356" src="https://github.com/user-attachments/assets/d4ae2595-3782-41cb-925f-125d69d70537" />
+<img width="1919" height="1079" alt="Ekran görüntüsü 2026-08-13 200600" src="https://github.com/user-attachments/assets/c55a2e5b-b6d7-41f0-adcc-fa84ac37c4e9" />
 
+**[Try it live](https://circuitphantom.github.io/CircuitOS/)**
 
-**[Try it live here](https://circuitphantom.github.io/CircuitOS/)**
+## Quick Start
 
-## Quick start
+1. Clone the repository:
 
-Just open the link above — nothing to install.
-(Tip: To open the welcome screen again, just click on the CircuitOS text on the topbar.)
-
-To run it locally instead:
-
-```bash
+```
 git clone https://github.com/CircuitPhantom/CircuitOS.git
-cd CircuitOS
 ```
 
-Then open `index.html` in a browser, or serve the folder with VS Code's Live Server.
+2. Open the project folder in VS Code.
+3. Start it with Live Server, or open `index.html` directly in your browser.
 
 ## Features
 
-- Draggable "window" UI (starting with the welcome window)
-- Live topbar clock and date, updating every second
-- Closable windows with a custom titlebar and close button
-- Orbitron-based UI typography for a distinct OS look
-- Zero dependencies — pure HTML/CSS/JS, runs entirely client-side
+- Draggable, closable windows with a shared header bar
+- Click-to-focus window stacking (clicked windows move to the front)
+- Welcome screen with project info and links
+- **ToDoS** — a simple to-do list app: add tasks, check them off (shown with strikethrough), and clear the whole list
+- Live topbar clock and date
 
-## Tech stack
+## Tech Stack
 
-HTML, CSS, and JavaScript. No frameworks, no backend, no build step.
+- HTML
+- CSS
+- JavaScript
 
-## How it works
+No frameworks or backend — everything runs client-side.
 
-The whole shell is static: `index.html` renders the topbar and window DOM, `styles.css` handles the OS-like chrome (rounded window frames, blurred titlebars), and `script.js` drives the interactive bits — dragging windows and closing them. The clock is a simple `setInterval` that re-renders the topbar every second, no external time library needed.
+## Current Status
 
-## Status
+Early stage. The window management system (drag, open/close, focus) and the welcome screen are in place, along with a first working app, ToDoS. More apps and system features are planned.
 
-Early stage — this is a [Stardance](https://stardance.hackclub.com/) mission on Hack Club. Right now CircuitOS has one functional window (Welcome) with dragging and closing; more OS-like windows/apps are planned next.
+## Development Notes
+
+This is a learning project, so some parts were built with help from AI tools — most notably the ToDoS app, where I used AI assistance to work through the JavaScript for dynamically adding tasks, handling checkbox state, and wiring up the clear/add buttons.
 
 ## License
 
-[MIT](LICENSE)
+This project is licensed under the MIT License.
+
+## About
+
+CircuitOS is an operating system that can be run in the web. It is a [Stardance](https://stardance.hackclub.com/projects/47178) mission on HackClub.
